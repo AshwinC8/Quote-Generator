@@ -1,5 +1,6 @@
 import { styled, Button, Toolbar } from '@mui/material'
 import { positions, right, left } from '@mui/system';
+import { Link } from 'react-router-dom';
 
 const Buttonbar = styled(Toolbar)`
     display : inline-flex;
@@ -11,8 +12,8 @@ const Buttonbar = styled(Toolbar)`
 function Header() {
     return(
         <Buttonbar>
-            <Button sx={{color:"white", borderColor: "white", m: 2}}>Home</Button>
-            <Button sx={{color:"white", borderColor: "white", m: 2}}>Bookmarks</Button>
+            <Button sx={{color:"white", borderColor: "white", m: 2}} component={Link} to="/">Home</Button>
+            <Button sx={{color:"white", borderColor: "white", m: 2}} component={Link} to="/bookmark">Bookmarks</Button>
         </Buttonbar>
     )
 }
